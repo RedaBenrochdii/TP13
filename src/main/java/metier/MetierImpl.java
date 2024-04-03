@@ -7,8 +7,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class MetierImpl implements IMetier {
     // couplage faible
-    private IDao dao;
+    @Autowired
 
+    private IDao dao;
     public MetierImpl(IDao dao){
         this.dao=dao;
     }
